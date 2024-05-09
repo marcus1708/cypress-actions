@@ -25,6 +25,3 @@ jobs:
         env:
           CYPRESS_RECORD_KEY: e0c1258e-764c-4540-99dc-fb295f6d31d8
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
-      - name: Run E2E tests
-        run: ${{ github.event.inputs.cli }} 
