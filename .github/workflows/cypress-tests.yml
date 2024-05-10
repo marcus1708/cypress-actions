@@ -10,6 +10,9 @@ on:
 jobs:
   cypress-electron-tests:  
     runs-on: ubuntu-latest
+    container: 
+      image: cypress/browsers:node-20.12.2-chrome-124.0.6367.155-1-ff-125.0.3-edge-124.0.2478.80-1
+      options: --user 1001
     steps:
       - name: Get code 
         uses: actions/checkout@v4.1.5
