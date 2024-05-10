@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
     inputs:
       cli:
-        description: Run by cypress command line
-        default: yarn cypress run
+        description: Run by cypress node command
+        default: node runner.js
 
 jobs:
   cypress-electron-tests:  
