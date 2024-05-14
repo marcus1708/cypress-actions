@@ -21,7 +21,7 @@ jobs:
     env: 
       TARGET_TOKEN_ELECTRON: ${{ secrets.TARGET_TOKEN_ELECTRON}}
 
-  cypress-crhome-tests:  
+  cypress-chrome-tests:  
     needs: cypress-electron-tests
     runs-on: ubuntu-latest
     container: 
@@ -35,12 +35,12 @@ jobs:
         run: yarn install
 
       - name: Run E2E tests
-        run: node runner-crhome.js
+        run: node runner-chrome.js
     env: 
       TARGET_TOKEN_CRHOME: ${{ secrets.TARGET_TOKEN_CRHOME}}
         
   cypress-firefox-tests:  
-    needs: cypress-crhome-tests
+    needs: cypress-chrome-tests
     runs-on: ubuntu-latest
     container: 
       image: cypress/browsers:node-20.12.2-chrome-124.0.6367.155-1-ff-125.0.3-edge-124.0.2478.80-1
