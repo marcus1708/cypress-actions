@@ -5,7 +5,7 @@ cypress.run({
 })
 .then((results) => {
   const args = {
-    target: process.env.TARGET_TOKEN_CHROME,
+    target: process.env.TARGET_TOKEN_CRHOME,
   }
   tesults.results(results, args);
 })
