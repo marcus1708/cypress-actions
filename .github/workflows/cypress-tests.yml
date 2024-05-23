@@ -71,7 +71,7 @@ jobs:
         run: yarn install
 
       - name: Run E2E tests
-        run: node runner-firefox.js
+        run: node runner-edge.js
     env: 
       TARGET_TOKEN_EDGE: ${{ secrets.TARGET_TOKEN_EDGE}}
 
